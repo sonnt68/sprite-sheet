@@ -1,0 +1,75 @@
+:root {
+   --pixel-size: 10;
+}
+
+body {
+   background: #9c8271;
+}
+
+.Character {
+   width: calc(32px * var(--pixel-size));
+   height: calc(32px * var(--pixel-size));
+   overflow: hidden;
+   position: relative;
+   margin: 4em auto;
+}
+
+.Character_spritesheet {
+   animation: moveSpritesheet 1s steps(4) infinite;
+   width: calc(300px * var(--pixel-size));
+   position: absolute;
+   
+}
+.Character_shadow {
+   position: absolute;
+   width: calc(32px * var(--pixel-size));
+   height: calc(32px * var(--pixel-size));
+}
+
+.pixelart {
+   image-rendering: pixelated;
+}
+
+.face-up {
+   top: calc(5px * var(--pixel-size));
+}
+
+.face-left {
+   top: calc(-30px * var(--pixel-size));
+}
+.face-down {
+   top: calc(-65px * var(--pixel-size));
+}
+.face-right {
+   top: calc(-99px * var(--pixel-size));
+}
+
+.face-shift-up {
+   top: calc(-135px * var(--pixel-size));
+}
+
+.face-shift-left {
+   top: calc(-170px * var(--pixel-size));
+}
+
+.face-shift-down {
+   top: calc(-204px * var(--pixel-size));
+}
+
+.face-shift-right {
+   top: calc(-238px * var(--pixel-size));
+}
+
+.face-shift-right {
+   top: calc(-238px * var(--pixel-size));
+}
+
+
+@keyframes moveSpritesheet {
+   from {
+      transform: translate3d(0px,0,0)
+   }
+   to {
+      transform: translate3d(-92%,0,0)
+   }
+}
